@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Application Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>Option 1</ion-label>
+    <ion-toggle [(ngModel)]="option1" (ionChange)="savePreference('option1', option1)"></ion-toggle>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Option 2</ion-label>
+    <ion-toggle [(ngModel)]="option2" (ionChange)="savePreference('option2', option2)"></ion-toggle>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Option 3</ion-label>
+    <ion-toggle [(ngModel)]="option3" (ionChange)="savePreference('option3', option3)"></ion-toggle>
+  </ion-item>
+
+  <hr>
+
+  <ion-item>
+    <ion-checkbox [(ngModel)]="checkbox1" (ionChange)="savePreference('checkbox1', checkbox1)"></ion-checkbox>
+    <ion-label>Checkbox 1</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-checkbox [(ngModel)]="checkbox2" (ionChange)="savePreference('checkbox2', checkbox2)"></ion-checkbox>
+    <ion-label>Checkbox 2</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-checkbox [(ngModel)]="checkbox3" (ionChange)="savePreference('checkbox3', checkbox3)"></ion-checkbox>
+    <ion-label>Checkbox 3</ion-label>
+  </ion-item>
+
+  <hr>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="selectedRadio" (ionChange)="savePreference('selectedRadio', selectedRadio)">
+      <ion-item>
+        <ion-label>Option A</ion-label>
+        <ion-radio slot="start" value="A"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Option B</ion-label>
+        <ion-radio slot="start" value="B"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+</ion-content>
